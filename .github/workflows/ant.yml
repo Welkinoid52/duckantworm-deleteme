@@ -1,0 +1,11 @@
+name: service container demo
+
+on:                                  #on properties
+  workflow_dispathc
+  push:                                  #automatic push
+ jobs:
+   ant01:
+   runs-on: ubuntu-latest
+   steps:
+   -asdf
+   services:
