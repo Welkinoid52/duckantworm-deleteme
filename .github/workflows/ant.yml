@@ -10,3 +10,9 @@ on:
    steps:
    -asdf
    services:
+   mydatabase:
+    image: mysql: 8.0.33
+    ports:
+    - 3306:3306
+    emv:
+     MYSQL_ROOT_PASSWORD: Akash@52
