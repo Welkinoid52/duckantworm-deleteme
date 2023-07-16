@@ -9,6 +9,9 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    -  uses: actions/checkout@v3.5.3
+   - shell: pwsh
+     run: |
+       msql --host=127.0.0.1 --port=3310 --user=root --password=Akash@52 --database=mysql     
   services:
     mydatabase:
      image: mysql:8.0.33
