@@ -8,7 +8,7 @@ on:
    ant01:
    runs-on: ubuntu-latest
    steps:
-   -asdf
+   -  uses: actions/checkout@v3.5.3
    services:
    mydatabase:
     image: mysql: 8.0.33
