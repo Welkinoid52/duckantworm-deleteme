@@ -1,18 +1,18 @@
 name: service container demo
 
 on:                                  
-  workflow_dispath:
-  push:
+ workflow_dispatch:
+ push:
   
- jobs:
-   ant01:
-   runs-on: ubuntu-latest
-   steps:
+jobs:
+ ant01:
+  runs-on: ubuntu-latest
+  steps:
    -  uses: actions/checkout@v3.5.3
-   services:
-   mydatabase:
-    image: mysql: 8.0.33
-    ports:
-    - 3306:3306
-    emv:
-     MYSQL_ROOT_PASSWORD: Akash@52
+  services:
+    mydatabase:
+     image: mysql:8.0.33
+     ports:
+     - 3306:3306
+     env:
+      MYSQL_ROOT_PASSWORD: Akash@52
