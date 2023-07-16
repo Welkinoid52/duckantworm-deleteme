@@ -13,11 +13,11 @@ jobs:
      run: sleep 15
    - shell: pwsh
      run: |
-       mysql --host=127.0.0.1 --port=3310 --user=root --password =Akash@52 --database=mysql     
+       mysql --host= 127.0.0.1 --port=3310 --user=root --password = Akash@52 --database= mysql     
   services:
     mydatabase:
      image: mysql:8.0.33
      ports:
-     - 3306:3306
+     - 3310:3306
      env:
       MYSQL_ROOT_PASSWORD: Akash@52
