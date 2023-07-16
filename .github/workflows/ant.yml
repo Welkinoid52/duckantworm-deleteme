@@ -8,7 +8,9 @@ jobs:
  ant01:
   runs-on: ubuntu-latest
   steps:
-   -  uses: actions/checkout@v3.5.3
+   - uses: actions/checkout@v3.5.3
+   - name: Wait for MySQL Initialization
+     run: sleep 15
    - shell: pwsh
      run: |
        mysql --host=127.0.0.1 --port=3310 --user=root --password=Akash@52 --database=mysql     
