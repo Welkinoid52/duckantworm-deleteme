@@ -7,17 +7,16 @@ on:
 jobs:
  ant01:
   runs-on: ubuntu-latest
+  container: mysql:8.0.33
   steps:
-   - uses: actions/checkout@v3.5.3
-   - name: Wait for MySQL Initialization
-     run: sleep 15
-   - shell: pwsh
-     run: |
-       mysql --host=127.0.0.1 --port=3310 --user=root --password=${{ secrets.MY_SQL_PWD }} --database=mysql     
+  - uses: actions/checkout@v3.5.3
+  - name: Wait for MySQL Initialization
+    run: sleep 15
+  - shell: pwsh
+    run: |
+       mysql --host=mydatabase --port=3306 --user=root --password=${{ secrets.MY_SQL_PWD }} --database=mysql     
   services:
     mydatabase:
      image: mysql:8.0.33
-     ports:
-     - 3310:3306
      env:
       MYSQL_ROOT_PASSWORD: ${{ secrets.MY_SQL_PWD }}
