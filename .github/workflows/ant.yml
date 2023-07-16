@@ -1,8 +1,9 @@
 name: service container demo
 
-on:                                  #on properties
+on:                                  
   workflow_dispathc
-  push:                                  #automatic push
+  push:
+  
  jobs:
    ant01:
    runs-on: ubuntu-latest
